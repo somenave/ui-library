@@ -2,7 +2,7 @@ import $ from "../core";
 
 $.prototype.getAttr = function(attributeName) {
     for (let i = 0; i < this.length; i++) {
-        if (!this[i].getAttribute(attributeName)) {
+        if (!this[i].getAttribute) {
             continue;
         }
         return this[i].getAttribute(attributeName);
